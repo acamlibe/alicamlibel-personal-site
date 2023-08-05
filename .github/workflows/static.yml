@@ -4,13 +4,6 @@ name: AzureStorageStaticHtml
 on:
     push:
         branches: [ master ]
-        paths:
-          - '**.html'
-          - '**.css'
-          - '**.jpg'
-          - '**.png'
-          - '**.gif'
-          - '**.ttf'
 
 jobs:
   build:
@@ -25,7 +18,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name alicamlibelstorage --auth-mode key -d '$web' -s . --overwrite --pattern *.{html,css,js,png,jpg,gif}
+            az storage blob upload-batch --account-name alicamlibelstorage --auth-mode key -d '$web' -s . --overwrite
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
