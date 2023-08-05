@@ -1,19 +1,32 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: AzureStorageStaticHtml
 
-# File: .github/workflows/workflow.yml
-
-on: [push]
+on:
+    push:
+        branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps: 
-    - name: Checkout the code
-      uses: actions/checkout@v3
-    - name: Deploy the website
-      uses: tibor19/static-website-deploy@v2
+    steps:
+    - uses: actions/checkout@v3
+    - uses: azure/login@v1
       with:
-        enabled-static-website: 'true'
-        folder: '/'
-        connection-string: ${{ secrets.CONNECTION_STRING }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name alicamlibelstorage --auth-mode key -d '$web' -s .
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az cdn endpoint purge --content-paths  "/*" --profile-name "alicamlibel-web-cdn" --name "https://alicamlibel-web-cdn.azureedge.net" --resource-group "alicamlibel-rg"
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
