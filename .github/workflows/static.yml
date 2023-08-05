@@ -4,6 +4,13 @@ name: AzureStorageStaticHtml
 on:
     push:
         branches: [ master ]
+        paths:
+          - '**.html'
+          - '**.css'
+          - '**.jpg'
+          - '**.png'
+          - '**.gif'
+          - '**.ttf'
 
 jobs:
   build:
