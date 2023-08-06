@@ -1,0 +1,22 @@
+{
+  "name": "alicamlibel-personal-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "minify-html": "html-minifier --collapse-whitespace --file-ext html --input-dir ./src --output-dir ./dist",
+    "optimize-css": "postcss src/css/*.css --use autoprefixer cssnano postcss-pxtorem --dir dist/css --no-map",
+    "move-fonts": "node move-fonts",
+    "build": "npm run minify-html && npm run optimize-css && npm run move-fonts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "html-minifier-terser": "^7.2.0",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-pxtorem": "^6.0.0"
+  }
+}
