@@ -6,8 +6,8 @@
   "scripts": {
     "minify-html": "html-minifier-terser --collapse-whitespace --file-ext html --input-dir ./src --output-dir ./dist",
     "optimize-css": "postcss src/css/*.css --use autoprefixer cssnano postcss-pxtorem --dir dist/css --no-map",
-    "move-fonts": "node move-fonts",
-    "build": "npm run minify-html && npm run optimize-css && npm run move-fonts"
+    "move-static-files": "node move-static-files",
+    "build": "npm run minify-html && npm run optimize-css && npm run move-static-files"
   },
   "author": "",
   "license": "ISC",
