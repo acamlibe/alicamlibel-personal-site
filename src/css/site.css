@@ -7,9 +7,6 @@ html * {
   font-family: rem-regular, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-stroke: 0.45px;
-  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
-  text-shadow: #fff 0px 1px 1px;
 }
 body,
 html {
@@ -27,12 +24,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 1rem;
-  margin-top: 0;
+  margin: 0;
   font-weight: 500;
 }
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 h1 {
   font-size: 2rem;
@@ -63,7 +59,7 @@ ul {
 }
 
 small {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 #page {
@@ -76,7 +72,7 @@ small {
 }
 header {
   align-items: center;
-  background-color: #d3d3d3;
+  background-color: #bfe3ef;
   border-bottom: 4px solid black;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -126,11 +122,11 @@ main {
   width: 100%;
 }
 .experience-header {
-  background-color: rgb(191, 227, 239);
-  border: 3px solid black;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  background-color: #efcbbf;
+  border: 3px solid black;
   padding: 1rem 2rem;
 }
 .experience-title {
@@ -159,7 +155,7 @@ main {
   flex: 1;
 }
 #about-me-page {
-    display: flex;
+  display: flex;
 }
 
 #about-me-sections {
@@ -186,6 +182,7 @@ main {
   margin-right: 1rem;
   width: 100%;
 }
+
 #error-404-box {
   border: 3px solid black;
   border-radius: 0.5rem;
