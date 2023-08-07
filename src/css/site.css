@@ -174,8 +174,6 @@ main {
 }
 #about-me-photo > img {
   border: 3px solid black;
-  width: 600px;
-  aspect-ratio: 3/4;
 }
 #philosophies-list > li:not(:last-child) {
   margin-bottom: 1rem;
@@ -219,4 +217,5 @@ main {
 }
 .underline {
   text-decoration: underline;
+  text-decoration-color: black;
 }
