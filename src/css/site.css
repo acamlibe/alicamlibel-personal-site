@@ -177,10 +177,10 @@ main {
 #about-me-photo > img {
   border: 3px solid black;
 }
-#philosophies-list > li:not(:last-child) {
+.philosophies-list > li:not(:last-child) {
   margin-bottom: 1rem;
 }
-#philosophies-list > li:last-child {
+.philosophies-list > li:last-child {
   margin-bottom: 0;
 }
 .social-media-logo {
