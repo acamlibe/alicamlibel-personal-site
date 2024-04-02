@@ -10,14 +10,10 @@ html * {
 }
 body,
 html {
-  background-color: #000;
   color: #000;
   height: 100%;
-  overflow: none;
 }
-body {
-  padding: 1rem;
-}
+
 h1,
 h2,
 h3,
@@ -63,14 +59,13 @@ small {
 }
 
 hr {
-    height: 3px;
-    background-color: black;
-    border: none;
+  height: 3px;
+  background-color: black;
+  border: none;
 }
 
 #page {
   background-color: #f7f7f7;
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -80,27 +75,43 @@ header {
   align-items: center;
   background-color: #bfe3ef;
   border-bottom: 4px solid black;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
   justify-content: space-between;
+  height: 65px;
 }
 header,
 header > nav {
   display: flex;
+  align-items: center;
 }
 header > nav > a {
   color: #000;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1rem 2rem;
   text-decoration: none;
+}
+#menu-button-phone {
+  display: none;
 }
 #homepage-nav-link {
   border-right: 4px solid black;
 }
-header > nav > a.active:not(:first-child),
-header > nav > a:hover {
+#nav-left > a.active:not(:first-child),
+#nav-left > a:hover {
   background-color: #000;
   color: #fff;
+}
+#nav-right {
+  height: 100%;
+}
+#nav-right > a {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  height: 100%;
+ 
+}
+#nav-right img {
+
 }
 main {
   overflow: auto;
@@ -174,8 +185,16 @@ main {
   order: 2;
   margin-left: 2rem;
 }
+#about-me-intro-text {
+  margin-bottom: 1rem;
+}
 #about-me-photo > img {
   border: 3px solid black;
+}
+.figure-photo img {
+  border: 3px solid black;
+  width: 400px;
+  height: auto;
 }
 .philosophies-list > li:not(:last-child) {
   margin-bottom: 1rem;
@@ -206,6 +225,11 @@ main {
 
 .bg-blue {
     background-color: #bfe3ef;
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
 }
 
 #error-404-box {
@@ -240,4 +264,21 @@ main {
 .underline {
   text-decoration: underline;
   text-decoration-color: black;
+}
+
+@media only screen and (max-width: 1200px) {
+  #nav-left > a:not(:first-child) {
+    display: none;
+  }
+  #menu-button-phone {
+    display: block;
+    margin-right: 1rem;
+    height: max-content;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  #nav-right {
+    align-items: center;
+  }
 }
