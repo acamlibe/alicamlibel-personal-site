@@ -11,22 +11,21 @@
   </head>
   <body>
     <div id="page">
-      <header>
-        <nav>
+      <header id="top-header" class="flex-row">
+        <div class="flex-row w-100">
           <a id="homepage-nav-link" href="/">Ali Camlibel</a>
-          <a href="education.html">Education</a>
-          <a href="work.html">Work Experience</a>
-          <a href="blog.html">Blog</a>
-          <a class="active" href="about.html">About Me</a>
-        </nav>
-        <nav>
-          <a href="https://www.linkedin.com/in/alicamlibel/" target="_blank"
-            >LinkedIn</a
-          >
-        </nav>
+          <nav id="nav-menu-pages" class="flex-row align-items-center w-100">
+            <a href="education.html">Education</a>
+            <a href="work.html">Work Experience</a>
+            <a href="blog.html">Blog</a>
+            <a class="active" href="about.html">About Me</a>
+            <a id="linkedin-link" href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
+          </nav>
+        </div>
+        <button id="menu-hamburger" onclick="toggleMobileNav()"><img src="img/hamburger.svg" alt="Menu expand/collapse icon" /></button>
       </header>
 
-      <main>
+      <main id="main-content">
         <div id="about-me-page">
           <figure id="about-me-photo">
             <img
@@ -48,7 +47,7 @@
                 engines), and work on my personal software projects.
               </p>
 
-              <div class="flex-row">
+              <div class="flex-row gap-1">
                 <figure class="figure-photo">
                   <a href="img/1968-ford-ltd.jpg">
                     <img
@@ -166,5 +165,7 @@
         </div>
       </main>
     </div>
+
+    <script src="js/mobile-nav.js" defer></script>
   </body>
 </html>

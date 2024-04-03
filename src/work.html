@@ -11,20 +11,21 @@
   </head>
   <body>
     <div id="page">
-      <header>
-        <nav>
+      <header id="top-header" class="flex-row">
+        <div class="flex-row w-100">
           <a id="homepage-nav-link" href="/">Ali Camlibel</a>
-          <a href="education.html">Education</a>
-          <a class="active" href="work.html">Work Experience</a>
-          <a href="blog.html">Blog</a>
-          <a href="about.html">About Me</a>
-        </nav>
-        <nav>
-          <a href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
-        </nav>
+          <nav id="nav-menu-pages" class="flex-row align-items-center w-100">
+            <a href="education.html">Education</a>
+            <a class="active" href="work.html">Work Experience</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About Me</a>
+            <a id="linkedin-link" href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
+          </nav>
+        </div>
+        <button id="menu-hamburger" onclick="toggleMobileNav()"><img src="img/hamburger.svg" alt="Menu expand/collapse icon" /></button>
       </header>
 
-      <main>
+      <main id="main-content">
         <section id="experience-list">
           <div class="experience">
             <div class="experience-header">
@@ -156,5 +157,7 @@
         </section>
       </main>
     </div>
+
+    <script src="js/mobile-nav.js" defer></script>
   </body>
 </html>
