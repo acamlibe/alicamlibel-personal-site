@@ -21,4 +21,8 @@ const isMobileNavExpanded = () => {
     return nav.style.display === "flex";
 }
 
-content.onclick = collapseMobileNav;
+content.onclick = () => {
+    if (window.innerWidth < 1100) {
+        collapseMobileNav();
+    }
+};
