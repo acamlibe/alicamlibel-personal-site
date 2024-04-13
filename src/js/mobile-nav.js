@@ -38,9 +38,6 @@ const windowResize = () => {
 };
 
 menuButton.addEventListener("click", toggleMobileNav);
-menuButton.addEventListener("tap", toggleMobileNav);
-
 content.addEventListener("click", contentClick);
-content.addEventListener("tap", contentClick);
 
 window.addEventListener("resize", windowResize);
