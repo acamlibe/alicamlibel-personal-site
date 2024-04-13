@@ -6,47 +6,67 @@
     <meta name="author" content="Ali Camlibel" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/util.css" />
     <link rel="stylesheet" href="css/site.css" />
     <title>Ali Camlibel - About Me</title>
   </head>
   <body>
     <div id="page">
-      <header>
-        <nav>
+      <header id="top-header" class="flex-row">
+        <div class="flex-row w-100">
           <a id="homepage-nav-link" href="/">Ali Camlibel</a>
-          <a href="education.html">Education</a>
-          <a href="work.html">Work Experience</a>
-          <a href="blog.html">Blog</a>
-          <a class="active" href="about.html">About Me</a>
-        </nav>
-        <nav>
-          <a href="https://www.linkedin.com/in/alicamlibel/" target="_blank"
-            >LinkedIn</a
-          >
-        </nav>
+          <nav id="nav-menu-pages" class="flex-row align-items-center w-100">
+            <a href="education.html">Education</a>
+            <a href="work.html">Work Experience</a>
+            <a href="blog.html">Blog</a>
+            <a id="linkedin-link" href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
+          </nav>
+        </div>
+        <button id="menu-hamburger" onclick="toggleMobileNav()"><img src="img/hamburger.svg" alt="Menu expand/collapse icon" /></button>
       </header>
 
-      <main>
+      <main id="main-content">
         <div id="about-me-page">
-          <figure id="about-me-photo">
-            <img
-              src="img/about-me.jpeg"
-              alt="A picture of me and my pug, Abi."
-            />
-            <figcaption>A picture of me and my pug.</figcaption>
-          </figure>
-
           <div id="about-me-sections">
             <section>
               <div class="title-box bg-orange">
                 <h1>Introduction</h1>
               </div>
-              <p>
-                Hi, my name is Ali Camlibel. I am a full-time junior software
-                developer and a part-time data science student. In my free time,
-                I DJ for my friends, research everything about cars (especially
-                engines), and work on my personal software projects.
-              </p>
+              <div class="flex-row flex-wrap gap-1">
+                <p id="about-me-intro-text">
+                  Hi, my name is Ali Camlibel. I am a full-time junior software
+                  developer and a part-time data science student. In my free time,
+                  I DJ for my friends, research everything about cars (especially
+                  engines), and work on my personal software projects. I also have a little pug who I love very much.
+                </p>
+                <figure class="figure-photo">
+                  <a href="img/1968-ford-ltd.jpg">
+                    <img
+                      src="img/1968-ford-ltd.jpg"
+                      alt="1968 Ford LTD 390ci"
+                    />
+                  </a>
+                  <figcaption>1968 Ford LTD 390ci</figcaption>
+                </figure>
+                <figure class="figure-photo">
+                  <a href="img/dj-setup.jpg">
+                    <img
+                      src="img/dj-setup.jpg"
+                      alt="Denon DJ Prime 4 and KRK Rokit monitors/sub"
+                    />
+                  </a>
+                  <figcaption>Denon DJ Prime 4 and KRK Rokit monitors/sub</figcaption>
+                </figure>
+                <figure class="figure-photo">
+                  <a href="img/abi.png">
+                    <img
+                      src="img/abi.png"
+                      alt="A picture of me and my pug, Abi."
+                    />
+                  </a>
+                  <figcaption>A picture of my pug</figcaption>
+                </figure>
+              </div>
             </section>
 
             <hr />
@@ -90,12 +110,6 @@
                   does in one sentence, it's doing too much."
                 </li>
                 <li>
-                  <strong>Domain Driven Design & Ubiquitous Language</strong> -
-                  Software is written to handle business needs, so our code
-                  should represent the business by describing the rules and
-                  language used by the business.
-                </li>
-                <li>
                   <strong>Performance</strong> - Imagine a Google search taking
                   longer than 10 seconds, in this day and age. Systems should be
                   as performant as can be, without sacrificing maintainability
@@ -116,7 +130,7 @@
                   <strong>Lightweight Page Load</strong> - Gone were the days of
                   websites that served maybe a few hundred kilobytes worth of
                   bandwidth to users. Nowadays, you go to Google.com and load
-                  ~3.4MB. Obviously with caching and use of CDNs, it's not such
+                  ~3.4MB. Obviously with caching and the use of CDNs, it's not such
                   a big deal, but I feel it has made developers too carefree.
                 </li>
                 <li>
@@ -147,20 +161,11 @@
                 </li>
               </ol>
             </section>
-
-            <hr />
-
-            <section>
-              <div class="title-box bg-blue">
-                <h2>As a Data Science Student...</h2>
-              </div>
-              <p>
-                To be written.
-              </p>
-            </section>
           </div>
         </div>
       </main>
     </div>
+
+    <script src="js/mobile-nav.js" defer></script>
   </body>
 </html>

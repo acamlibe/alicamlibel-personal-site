@@ -1,0 +1,57 @@
+.underline {
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-equal-width > * {
+    width: 100%;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.bg-orange {
+    background-color: #efcbbf;
+}
+
+.bg-blue {
+    background-color: #bfe3ef;
+}
+
+.border {
+    border: 2px solid black;
+}
+
+.img-responsive {
+    height: auto;
+}
+
+.img-inline {
+    display: inline;
+}

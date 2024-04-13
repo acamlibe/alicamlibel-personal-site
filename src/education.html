@@ -6,35 +6,36 @@
     <meta name="author" content="Ali Camlibel" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/util.css" />
     <link rel="stylesheet" href="css/site.css" />
     <title>Ali Camlibel - Education</title>
   </head>
   <body>
     <div id="page">
-      <header>
-        <nav>
+      <header id="top-header" class="flex-row">
+        <div class="flex-row w-100">
           <a id="homepage-nav-link" href="/">Ali Camlibel</a>
-          <a class="active" href="education.html">Education</a>
-          <a href="work.html">Work Experience</a>
-          <a href="blog.html">Blog</a>
-          <a href="about.html">About Me</a>
-        </nav>
-        <nav>
-          <a href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
-        </nav>
+          <nav id="nav-menu-pages" class="flex-row align-items-center w-100">
+            <a class="active" href="education.html">Education</a>
+            <a href="work.html">Work Experience</a>
+            <a href="blog.html">Blog</a>
+            <a id="linkedin-link" href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
+          </nav>
+        </div>
+        <button id="menu-hamburger" onclick="toggleMobileNav()"><img src="img/hamburger.svg" alt="Menu expand/collapse icon" /></button>
       </header>
 
-      <main>
-        <section id="experience-list">
+      <main id="main-content">
+        <section class="experience-list">
           <div class="experience">
             <div class="experience-header">
               <div class="experience-title">
                 <div>M.S. in Data Science and Business Analytics</div>
-                <div>August 2021 - <span class="underline">Present</span></div>
+                <div class="experience-date">August 2021 - <span class="underline">Present</span></div>
               </div>
               <div class="experience-subtitle">
                 <div>University of North Carolina at Charlotte</div>
-                <div>Charlotte, North Carolina</div>
+                <div class="experience-location">Charlotte, North Carolina</div>
               </div>
             </div>
             <div class="experience-body">
@@ -50,7 +51,7 @@
                 </p>
               </div>
               <div class="experience-coursework">
-                <small>My favorite courses:</small>
+                <p>My favorite courses:</p>
                 <ul>
                   <li>Applied Machine Learning</li>
                   <li>Cloud Computing for Data Analysis</li>
@@ -64,11 +65,11 @@
             <div class="experience-header">
               <div class="experience-title">
                 <div>B.S. in Business Information Technology</div>
-                <div>August 2015 - May 2019</div>
+                <div class="experience-date">August 2015 - May 2019</div>
               </div>
               <div class="experience-subtitle">
                 <div>Virginia Polytechnic Institute and State University</div>
-                <div>Blacksburg, Virginia</div>
+                <div class="experience-location">Blacksburg, Virginia</div>
               </div>
             </div>
             <div class="experience-body">
@@ -79,7 +80,7 @@
                 <p>One of the most important courses I took was on object-oriented design and analysis.</p>
               </div>
               <div class="experience-coursework">
-                <small>My favorite courses:</small>
+                <p>My favorite courses:</p>
                 <ul>
                   <li>Object Oriented Design & Analysis</li>
                   <li>Business Analysis Seminar in IT</li>
@@ -93,5 +94,7 @@
         </section>
       </main>
     </div>
+
+    <script src="js/mobile-nav.js" defer></script>
   </body>
 </html>

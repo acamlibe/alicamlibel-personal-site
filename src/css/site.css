@@ -3,21 +3,19 @@
   font-family: rem-regular;
   src: url(../fonts/REM-Regular.ttf);
 }
+
 html * {
   font-family: rem-regular, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body,
 html {
-  background-color: #000;
   color: #000;
   height: 100%;
-  overflow: none;
 }
-body {
-  padding: 1rem;
-}
+
 h1,
 h2,
 h3,
@@ -27,32 +25,41 @@ h6 {
   font-weight: 500;
   margin: 0;
 }
+
 strong {
   font-weight: 600;
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
   font-size: 1.7rem;
 }
+
 h3 {
   font-size: 1.45rem;
 }
+
 h4 {
   font-size: 1.25rem;
 }
+
 h5 {
   font-size: 1.1rem;
 }
+
 h6 {
   font-size: 1rem;
 }
+
 a,
 li,
 p {
   font-size: 1.2rem;
 }
+
 ol,
 ul {
   list-style-position: inside;
@@ -63,103 +70,152 @@ small {
 }
 
 hr {
-    height: 3px;
-    background-color: black;
-    border: none;
+  height: 3px;
+  background-color: black;
+  border: none;
 }
 
 #page {
   background-color: #f7f7f7;
-  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: none;
 }
-header {
+
+#top-header {
   align-items: center;
   background-color: #bfe3ef;
   border-bottom: 4px solid black;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
   justify-content: space-between;
+  height: 60px;
 }
-header,
-header > nav {
-  display: flex;
-}
-header > nav > a {
+
+#top-header a {
   color: #000;
-  font-size: 2rem;
-  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
   text-decoration: none;
 }
-#homepage-nav-link {
-  border-right: 4px solid black;
-}
-header > nav > a.active:not(:first-child),
-header > nav > a:hover {
+
+#top-header nav a.active,
+#top-header nav a:hover {
   background-color: #000;
   color: #fff;
 }
-main {
+
+#menu-hamburger {
+  display: none;
+  background-color: #bfe3ef;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#menu-hamburger:active>img {
+  transform: scale(1.10);
+}
+
+#homepage-nav-link {
+  border-right: 4px solid black;
+  text-wrap: nowrap;
+}
+
+#linkedin-link {
+  margin-left: auto;
+}
+
+#main-content {
+  padding: 2rem;
   overflow: auto;
+  height: calc(100% - 60px);
+}
+
+#hero-content {
+  display: flex;
+  background-color: #bfe3ef;
+  border: 3px solid black;
   padding: 2rem;
 }
-#hero {
-  background-color: #add8e6;
-  height: 700px;
-  padding: 6rem;
+
+#hero-img {
+  width: 300px;
 }
-#hero-content {
-  background-color: blue;
-  height: 100%;
+
+#programming-list {
+
+}
+
+progress {
   width: 100%;
+  height: 20px;
 }
-#experience-list {
+
+progress::-moz-progress-bar { 
+  background: #df5d32; 
+}
+
+progress::-webkit-progress-value { 
+  background: #df5d32; 
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #ececec;
+}
+
+.experience-list {
   gap: 2rem;
 }
-#experience-list,
+
+.experience-list,
 .experience {
   display: flex;
   flex-direction: column;
 }
+
 .experience {
   width: 100%;
 }
+
 .experience-header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   background-color: #efcbbf;
   border: 3px solid black;
-  padding: 1rem 2rem;
+  padding: 1rem 1.25rem;
 }
+
 .experience-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
+
 .experience-subtitle,
 .experience-title {
   display: flex;
   justify-content: space-between;
 }
+
 .experience-subtitle {
   font-size: 1.4rem;
 }
+
 .experience-body {
   border: 3px solid black;
   border-top: none;
   display: flex;
   gap: 4rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.25rem;
 }
-.experience-body > div {
+
+.experience-body>div {
   flex: 1;
 }
-.experience-coursework > ul {
+
+.experience-coursework>ul {
   margin: 0.5rem 0.5rem 0;
 }
+
 #about-me-page {
   display: flex;
 }
@@ -170,19 +226,36 @@ main {
   flex-direction: column;
   gap: 2rem;
 }
+
 #about-me-photo {
   order: 2;
   margin-left: 2rem;
 }
-#about-me-photo > img {
+
+#about-me-photo>img {
   border: 3px solid black;
 }
-.philosophies-list > li:not(:last-child) {
+
+#about-me-intro-text {
+  margin-bottom: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.figure-photo img {
+  border: 3px solid black;
+  width: 100%;
+  height: auto;
+}
+
+.philosophies-list>li:not(:last-child) {
   margin-bottom: 1rem;
 }
-.philosophies-list > li:last-child {
+
+.philosophies-list>li:last-child {
   margin-bottom: 0;
 }
+
 .social-media-logo {
   height: 100%;
   margin-right: 1rem;
@@ -190,22 +263,14 @@ main {
 }
 
 .content-box {
-    border: 3px solid black;
-    padding: 2rem;
+  border: 3px solid black;
+  padding: 2rem;
 }
 
 .title-box {
-    padding: 0 0.5rem;
-    border: 3px solid black;
-    margin-bottom: 1rem;
-}
-
-.bg-orange {
-    background-color: #efcbbf;
-}
-
-.bg-blue {
-    background-color: #bfe3ef;
+  padding: 0 0.5rem;
+  border: 3px solid black;
+  margin-bottom: 1rem;
 }
 
 #error-404-box {
@@ -221,23 +286,102 @@ main {
   top: calc(50% - 200px);
   width: 600px;
 }
-#error-404-box > h1 {
+
+#error-404-box>h1 {
   font-size: 6rem;
   font-weight: 400;
 }
+
 ::-webkit-scrollbar {
   width: 1rem;
 }
+
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #8f8f8f;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-.underline {
-  text-decoration: underline;
-  text-decoration-color: black;
+
+
+
+@media only screen and (max-width: 600px) {
+  .experience-title {
+    font-size: 1.4rem;
+  }
+
+  .experience-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .experience-header,
+  .experience-body {
+    padding: 1rem;
+  }
+
+  #hero-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #hero-content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #main-content {
+    padding: 1rem;
+  }
+
+  .experience-list {
+    gap: 1rem;
+  }
+
+  #nav-menu-pages {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    background-color: #bfe3ef;
+    width: 300px;
+    height: calc(100% - 60px);
+    border-left: 4px solid black;
+    box-shadow: -12px 0px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  #nav-menu-pages a {
+    width: 100%;
+    text-align: center;
+  }
+
+  #homepage-nav-link {
+    border-right: none;
+  }
+
+  #linkedin-link {
+    margin-left: 0;
+  }
+
+  #menu-hamburger {
+    display: block;
+    margin-right: 1rem;
+  }
+
+  .experience-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .experience-date,
+  .experience-location {
+    display: none;
+  }
 }

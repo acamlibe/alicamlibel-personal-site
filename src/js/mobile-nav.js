@@ -1,0 +1,37 @@
+var content = document.getElementById("main-content");
+var nav = document.getElementById("nav-menu-pages");
+
+const toggleMobileNav = () => {
+    if (isMobileNavExpanded()) {
+        collapseMobileNav()
+    } else {
+        expandMobileNav()
+    }
+}
+
+const expandMobileNav = () => {
+    nav.style.display = "flex";
+}
+
+const collapseMobileNav = () => {
+    nav.style.display = "none";
+}
+
+const isMobileNavExpanded = () => {
+    return nav.style.display === "flex";
+}
+
+content.onclick = () => {
+    if (window.innerWidth < 1100) {
+        collapseMobileNav();
+    }
+};
+
+window.onresize = () => {
+    if (!isMobileNavExpanded() && window.innerWidth >= 1100) {
+        expandMobileNav();
+    }
+    else if (isMobileNavExpanded() && window.innerWidth < 1100) {
+        collapseMobileNav();
+    }
+}
