@@ -26,3 +26,12 @@ content.onclick = () => {
         collapseMobileNav();
     }
 };
+
+window.onresize = () => {
+    if (!isMobileNavExpanded() && window.innerWidth >= 1100) {
+        expandMobileNav();
+    }
+    else if (isMobileNavExpanded() && window.innerWidth < 1100) {
+        collapseMobileNav();
+    }
+}

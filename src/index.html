@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="My professional portfolio." />
-    <meta name="author" content="Ali Camlibel" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/site.css" />
-    <title>Ali Camlibel</title>
-  </head>
-  <body>
-    <div id="page">
-      <header id="top-header" class="flex-row">
-        <div class="flex-row w-100">
-          <a id="homepage-nav-link" href="/">Ali Camlibel</a>
-          <nav id="nav-menu-pages" class="flex-row align-items-center w-100">
-            <a href="education.html">Education</a>
-            <a href="work.html">Work Experience</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About Me</a>
-            <a id="linkedin-link" href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
-          </nav>
-        </div>
-        <button id="menu-hamburger" onclick="toggleMobileNav()"><img src="img/hamburger.svg" alt="Menu expand/collapse icon" /></button>
-      </header>
-      
-      <main id="main-content">
-        To be developed.
-      </main>
-    </div>
 
-    <script src="js/mobile-nav.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="My professional portfolio." />
+  <meta name="author" content="Ali Camlibel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/util.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <title>Ali Camlibel</title>
+</head>
+
+<body>
+  <div id="page">
+    <header id="top-header" class="flex-row">
+      <div class="flex-row w-100">
+        <a class="active" id="homepage-nav-link" href="/">Ali Camlibel</a>
+        <nav id="nav-menu-pages" class="flex-row align-items-center w-100">
+          <a href="education.html">Education</a>
+          <a href="work.html">Work Experience</a>
+          <a href="blog.html">Blog</a>
+          <a id="linkedin-link" href="https://www.linkedin.com/in/alicamlibel/" target="_blank">LinkedIn</a>
+        </nav>
+      </div>
+      <button id="menu-hamburger" onclick="toggleMobileNav()"><img src="img/hamburger.svg"
+          alt="Menu expand/collapse icon" /></button>
+    </header>
+
+    <main id="main-content">
+      <div id="hero-content" class="content-box gap-1">
+        <img id="hero-img" class="img-responsive border" src="img/about-me.jpeg" alt="Picture of me and my pug."/>
+
+        <div class="flex-column justify-between gap-1">
+          <div class="flex-column gap-1">
+            <h1>Hi, I'm Ali Camlibel</h1>
+
+            <p>
+              I am a full-time junior software developer and a part-time data science student. 
+              In my free time, I DJ for my friends, research about cool things, and work on my personal software projects.
+            </p>
+  
+            <p>
+              This is my personal website, where you can explore my projects, experience, and learn more
+              about me.
+            </p>
+          </div>
+
+
+          <div class="flex-row align-items-center gap-1">
+            <a href="https://github.com/acamlibe" target="_blank">
+              <img src="img/github.svg" alt="GitHub logo" height="64px" />
+            </a>
+            <a href="https://www.linkedin.com/in/alicamlibel/" target="_blank">
+            <img src="img/linkedin.svg" alt="LinkedIn logo" height="64px" />  
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/mobile-nav.js" defer></script>
+</body>
+
 </html>

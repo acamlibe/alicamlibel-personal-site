@@ -111,7 +111,7 @@ hr {
   cursor: pointer;
 }
 
-#menu-hamburger:active > img {
+#menu-hamburger:active>img {
   transform: scale(1.10);
 }
 
@@ -125,21 +125,41 @@ hr {
 }
 
 #main-content {
-  overflow: auto;
   padding: 2rem;
+  overflow: auto;
   height: calc(100% - 60px);
 }
 
-#hero {
-  background-color: #add8e6;
-  height: 700px;
-  padding: 6rem;
+#hero-content {
+  display: flex;
+  background-color: #bfe3ef;
+  border: 3px solid black;
+  padding: 2rem;
 }
 
-#hero-content {
-  background-color: blue;
-  height: 100%;
+#hero-img {
+  width: 300px;
+}
+
+#programming-list {
+
+}
+
+progress {
   width: 100%;
+  height: 20px;
+}
+
+progress::-moz-progress-bar { 
+  background: #df5d32; 
+}
+
+progress::-webkit-progress-value { 
+  background: #df5d32; 
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #ececec;
 }
 
 .experience-list {
@@ -218,17 +238,13 @@ hr {
 
 #about-me-intro-text {
   margin-bottom: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
 }
 
 .figure-photo img {
   border: 3px solid black;
-  width: 400px;
-  height: auto;
-}
-
-.figure-photo img {
-  border: 3px solid black;
-  width: 400px;
+  width: 100%;
   height: auto;
 }
 
@@ -255,14 +271,6 @@ hr {
   padding: 0 0.5rem;
   border: 3px solid black;
   margin-bottom: 1rem;
-}
-
-.bg-orange {
-  background-color: #efcbbf;
-}
-
-.bg-blue {
-  background-color: #bfe3ef;
 }
 
 #error-404-box {
@@ -300,36 +308,30 @@ hr {
   background: #555;
 }
 
-.underline {
-  text-decoration: underline;
-  text-decoration-color: black;
-}
 
-.flex-row {
-  display: flex;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.gap-1 {
-  gap: 1rem;
-}
-
-.w-100 {
-  width: 100%;
-}
 
 @media only screen and (max-width: 600px) {
   .experience-title {
     font-size: 1.4rem;
   }
+
   .experience-subtitle {
     font-size: 1.2rem;
   }
-  .experience-header, .experience-body {
+
+  .experience-header,
+  .experience-body {
     padding: 1rem;
+  }
+
+  #hero-img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #hero-content {
+    flex-direction: column;
   }
 }
 
@@ -337,9 +339,11 @@ hr {
   #main-content {
     padding: 1rem;
   }
+
   .experience-list {
     gap: 1rem;
   }
+
   #nav-menu-pages {
     display: none;
     flex-direction: column;
@@ -352,25 +356,32 @@ hr {
     border-left: 4px solid black;
     box-shadow: -12px 0px 12px 0px rgba(0, 0, 0, 0.2);
   }
+
   #nav-menu-pages a {
     width: 100%;
     text-align: center;
   }
+
   #homepage-nav-link {
     border-right: none;
   }
+
   #linkedin-link {
     margin-left: 0;
   }
+
   #menu-hamburger {
     display: block;
     margin-right: 1rem;
   }
+
   .experience-body {
     flex-direction: column;
     gap: 1rem;
   }
-  .experience-date, .experience-location {
+
+  .experience-date,
+  .experience-location {
     display: none;
   }
 }
