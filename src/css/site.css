@@ -117,7 +117,7 @@ hr {
 
 #homepage-nav-link {
   border-right: 4px solid black;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 #linkedin-link {
