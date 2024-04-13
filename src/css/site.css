@@ -141,21 +141,19 @@ hr {
   width: 300px;
 }
 
-#programming-list {
-
-}
+#programming-list {}
 
 progress {
   width: 100%;
   height: 20px;
 }
 
-progress::-moz-progress-bar { 
-  background: #df5d32; 
+progress::-moz-progress-bar {
+  background: #df5d32;
 }
 
-progress::-webkit-progress-value { 
-  background: #df5d32; 
+progress::-webkit-progress-value {
+  background: #df5d32;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -373,6 +371,11 @@ progress[value]::-webkit-progress-bar {
   #menu-hamburger {
     display: block;
     margin-right: 1rem;
+  }
+
+  #menu-hamburger img {
+    pointer-events: none;
+    /* Ignore the image in event handling */
   }
 
   .experience-body {
