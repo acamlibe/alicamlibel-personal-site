@@ -2,14 +2,6 @@ var content = document.getElementById("main-content");
 var nav = document.getElementById("nav-menu-pages");
 var menuButton = document.getElementById("menu-hamburger");
 
-const toggleMobileNav = () => {
-    if (isMobileNavExpanded()) {
-        collapseMobileNav()
-    } else {
-        expandMobileNav()
-    }
-};
-
 const expandMobileNav = () => {
     nav.style.display = "flex";
 };
@@ -22,22 +14,24 @@ const isMobileNavExpanded = () => {
     return nav.style.display === "flex";
 };
 
-const contentClick = () => {
+menuButton.addEventListener("click", function() {
+    if (isMobileNavExpanded()) {
+        collapseMobileNav()
+    } else {
+        expandMobileNav()
+    }
+});
+content.addEventListener("click", function() {
     if (window.innerWidth < 1100) {
         collapseMobileNav();
     }
-};
+});
 
-const windowResize = () => {
+window.addEventListener("resize", function() {
     if (!isMobileNavExpanded() && window.innerWidth >= 1100) {
         expandMobileNav();
     }
     else if (isMobileNavExpanded() && window.innerWidth < 1100) {
         collapseMobileNav();
     }
-};
-
-menuButton.addEventListener("click", toggleMobileNav);
-content.addEventListener("click", contentClick);
-
-window.addEventListener("resize", windowResize);
+});
