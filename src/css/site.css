@@ -373,11 +373,6 @@ progress[value]::-webkit-progress-bar {
     margin-right: 1rem;
   }
 
-  #menu-hamburger img {
-    pointer-events: none;
-    /* Ignore the image in event handling */
-  }
-
   .experience-body {
     flex-direction: column;
     gap: 1rem;
