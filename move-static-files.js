@@ -1,9 +1,12 @@
-var fs = require("fs-extra");
+import { copy } from "fs-extra";
 
-fs.copy('src/fonts', 'dist/fonts', function (err) {
+onError = (err) => { 
   if (err) return console.error(err)
-});
+};
 
-fs.copy('src/img', 'dist/img', function (err) {
-  if (err) return console.error(err)
-});
+
+copy('src/fonts', 'dist/fonts', onError);
+
+copy('src/img', 'dist/img', onError);
+
+copy('src/js', 'dist/js', onError);

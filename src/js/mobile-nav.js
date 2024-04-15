@@ -14,23 +14,11 @@ const isMobileNavExpanded = () => {
     return nav.style.display === "flex";
 };
 
-menuButton.addEventListener("touchstart", function() {
-    if (isMobileNavExpanded()) {
-        collapseMobileNav()
-    } else {
-        expandMobileNav()
-    }
-});
 menuButton.addEventListener("click", function() {
     if (isMobileNavExpanded()) {
         collapseMobileNav()
     } else {
         expandMobileNav()
-    }
-});
-content.addEventListener("touchstart", function() {
-    if (window.innerWidth < 1100) {
-        collapseMobileNav();
     }
 });
 content.addEventListener("click", function() {
