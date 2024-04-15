@@ -21,7 +21,19 @@ menuButton.addEventListener("touchstart", function() {
         expandMobileNav()
     }
 });
+menuButton.addEventListener("click", function() {
+    if (isMobileNavExpanded()) {
+        collapseMobileNav()
+    } else {
+        expandMobileNav()
+    }
+});
 content.addEventListener("touchstart", function() {
+    if (window.innerWidth < 1100) {
+        collapseMobileNav();
+    }
+});
+content.addEventListener("click", function() {
     if (window.innerWidth < 1100) {
         collapseMobileNav();
     }
