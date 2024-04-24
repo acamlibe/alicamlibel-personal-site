@@ -104,6 +104,11 @@ hr {
   color: #fff;
 }
 
+.header-external-links {
+  display: flex;
+  margin-left: auto;
+}
+
 #menu-hamburger {
   display: none;
   background-color: #bfe3ef;
@@ -118,10 +123,6 @@ hr {
 #homepage-nav-link {
   border-right: 4px solid black;
   white-space: nowrap;
-}
-
-#linkedin-link {
-  margin-left: auto;
 }
 
 #main-content {
@@ -364,8 +365,10 @@ progress[value]::-webkit-progress-bar {
     border-right: none;
   }
 
-  #linkedin-link {
+  .header-external-links {
+    flex-direction: column;
     margin-left: 0;
+    width: 100%;
   }
 
   #menu-hamburger {
